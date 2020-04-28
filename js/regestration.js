@@ -4,6 +4,7 @@ window.onload = ()=>{
     let email = document.querySelector('#email')
     let password = document.querySelector('#password')
     let btn = document.querySelector('#save')
+    let btn1 = document.querySelector('#save')
     let storeArr = []
     btn.addEventListener('click',()=>{
         let regex = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)
@@ -51,6 +52,12 @@ name.addEventListener('keypress',function(e) {
         console.log(e)
         if (e.which == 13) {
             btn.focus()
+        }
+    })
+    btn.addEventListener('keypress',function(e) {
+        console.log(e)
+        if (e.which == 13) {
+            btn1.focus()
         }
     })
 }
