@@ -4,7 +4,7 @@ window.onload = ()=>{
     let email = document.querySelector('#email')
     let password = document.querySelector('#password')
     let btn = document.querySelector('#save')
-    let btn1 = document.querySelector('#save')
+    let btn1 = document.querySelector('#start')
     let storeArr = []
     btn.addEventListener('click',()=>{
         let regex = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)
@@ -30,34 +30,41 @@ window.onload = ()=>{
     
     
 })
-name.addEventListener('keypress',function(e) {
+name.addEventListener('keyup',function(e) {
         console.log(e)
         if (e.which == 13) {
             lastName.focus()
         }
     })
-    lastName.addEventListener('keypress',function(e) {
+    lastName.addEventListener('keyup',function(e) {
         console.log(e)
         if (e.which == 13) {
             email.focus()
         }
     })
-    email.addEventListener('keypress',function(e) {
+    email.addEventListener('keyup',function(e) {
         console.log(e)
         if (e.which == 13) {
             password.focus()
         }
     })
-    password.addEventListener('keypress',function(e) {
+    password.addEventListener('keyup',function(e) {
         console.log(e)
         if (e.which == 13) {
             btn.focus()
         }
     })
-    btn.addEventListener('keypress',function(e) {
+    btn.addEventListener('keyup',function(e) {
         console.log(e)
         if (e.which == 13) {
             btn1.focus()
         }
     })
+    btn1.addEventListener('click',function(e) {
+        e.preventDefault()
+        if(name.value.trim() != ''&&lastName.value.trim() != ''&&email.value.trim() != ''&&password.value.trim() != ''){
+            window.location = "https://www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_clearrectx"
+            
+    }
+})
 }
